@@ -1,0 +1,9 @@
+project_name:
+  type: str
+  help: What is your project name?
+author_name:
+  type: str
+  help: What is project author name?
+project_descr:
+  type: str
+  help: What is project description?

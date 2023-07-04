@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "litestar-hello-world"
+name = "{{project_name}}"
 version = "0.1.0"
-description = "A minimal template for Litestar based projects"
-authors = []
+description = "{{project_descr}}"
+authors = [{{author_name}}]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
-litestar = { extras = ["standard"], version="==2.0.0b2" }
+litestar = { extras = ["standard"], version = "==2.0.0b2" }
 # litestar = { extras = ["standard"], path = "../litestar/", develop = true }
 
 [tool.poetry.dev-dependencies]
@@ -37,9 +37,7 @@ exclude_lines = [
 ]
 
 [tool.coverage.run]
-omit = [
-    "tests/*",
-]
+omit = ["tests/*"]
 
 [tool.mypy]
 check_untyped_defs = true

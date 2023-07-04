@@ -9,13 +9,13 @@ from litestar import Litestar, get
 async def async_hello_world() -> dict[str, Any]:
     """Route Handler that outputs hello world."""
     await sleep(0.1)
-    return {"hello": "world"}
+    return {"hello": "{{project_name}} - {{author_name}}"}
 
 
 @get("/sync", sync_to_thread=False)
 def sync_hello_world() -> dict[str, Any]:
     """Route Handler that outputs hello world."""
-    return {"hello": "world"}
+    return {"hello": "{{project_name}} - {{author_name}}"}
 
 
 app = Litestar(route_handlers=[sync_hello_world, async_hello_world])
